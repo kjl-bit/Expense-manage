@@ -1,44 +1,26 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-10-06 11:45:30.369432",
+ "autoname": "prompt",
+ "creation": "2024-10-07 19:57:13.459462",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "employee",
-  "expense_type",
-  "date",
-  "amount",
+  "description",
   "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "employee",
+   "fieldname": "description",
    "fieldtype": "Data",
-   "label": "Employee"
-  },
-  {
-   "fieldname": "expense_type",
-   "fieldtype": "Link",
-   "label": "Expense type",
-   "options": "Expense Type"
-  },
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "label": "Date"
-  },
-  {
-   "fieldname": "amount",
-   "fieldtype": "Currency",
-   "label": "Amount"
+   "label": "Description"
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Expense Claim",
+   "options": "Expense Type",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -47,10 +29,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-10-07 19:58:11.380025",
+ "modified": "2024-10-07 20:08:42.082806",
  "modified_by": "Administrator",
  "module": "Expense",
- "name": "Expense Claim",
+ "name": "Expense Type",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {
@@ -68,16 +51,17 @@
   {
    "create": 1,
    "delete": 1,
+   "email": 1,
    "export": 1,
+   "print": 1,
    "read": 1,
    "report": 1,
    "role": "Employee",
+   "share": 1,
    "submit": 1,
    "write": 1
   },
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
